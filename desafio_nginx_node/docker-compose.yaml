@@ -25,12 +25,10 @@ services:
     command: node index.js
     networks:
       - node-network
-    volumes:
-      - ./node:/usr/src/app
     tty: true
     depends_on:
       - db
-  
+
   nginx:
     restart: always
     build: 
